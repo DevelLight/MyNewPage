@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@200&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+  }
+  
+  .logo {
+    cursor: pointer;
+  }
+  
+  .nav__links a,
+  .cta,
+  .overlay__content a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #edf0f1;
+    text-decoration: none;
+  }
+  
+  .nav__links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav__links li {
+    padding: 0px 20px;
+  }
+  
+  .nav__links li a {
+    transition: color 0.3s ease 0s;
+  }
+  
+  .nav__links li a:hover {
+    color: #5fd3f9;
+  }
+  
+  .cta {
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease 0s;
+  }
+  
+  .cta:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+  }
+  
+  /* Mobile Nav */
+  
+  .menu {
+    display: none;
+  }
+  
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: #24252a;
+    overflow-x: hidden;
+    transition: width 0.5s ease 0s;
+  }
+  
+  .overlay--active {
+    width: 100%;
+  }
+  
+  .overlay__content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .overlay a {
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: color 0.3s ease 0s;
+  }
+  
+  .overlay a:hover,
+  .overlay a:focus {
+    color: #0088a9;
+  }
+  .overlay .close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: #edf0f1;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay a {
+      font-size: 20px;
+    }
+    .overlay .close {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .nav__links,
+    .cta {
+      display: none;
+    }
+    .menu {
+      display: initial;
+    }
+    .text {
+      margin-top: 0px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      padding-top: 20%;
+      font-size: 6rem;
+    }
+  }
+  
+
+
+  /*HERO*/
+
+  .hero {
+    height: 100vh;
+    width: 100%;
+    background-image: url('../images/andres-molina.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    scroll-behavior: smooth;
+  }
+
+
+  .text{
+    margin-top: 50px;
+    font-family: Cabin;
+    text-align: center;
+    letter-spacing: 12px;
+    color: #fff;
+    text-indent: 12px;
+    animation: colorText 5s ease-out infinite,
+               nudgeText 5s ease-out infinite;
+  }
+  
+  /* Animations */
+  
+  
+  @keyframes colorText{
+    21% {
+      color: #4e5559;
+    }
+    30% {
+      color: #ffffff;
+    }
+    51% {
+      color: #4e5559;
+    }
+    60% {
+      color: #ffffff;
+    }
+    81% {
+      color: #4e5559;
+    }
+    90% {
+      color: #ffffff;
+    }
+  } 
+  
+  @keyframes nudgeText {
+    0%{
+      transform: translateY(0);
+    }
+    20%{
+      transform: translateY(2px);
+    }
+    30%{
+      transform: translateY(0);
+    }
+    50%{
+      transform: translateY(2px);
+    }
+    60%{
+      transform: translateY(0);
+    }
+    80%{
+      transform: translateY(2px);
+    }
+    90%{
+      transform: translateY(0);
+    }
+  }
+  /*TEXT*/
+
+  h1, h2 {
+    color: white;
+    font-family: Arima;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  h1 {
+    padding-top: 15%;
+    font-size: 6rem;
+  }
+  
+  h2 { font-size: 3rem; }
+
+
+  a {
+   text-decoration: none;
+  }
+
+/*INFO*/
+
+.info {
+  height: 100vh;
+  width: 100%;
+  background-color: white;
+  background-size: cover;
+  scroll-behavior: smooth;
+}
+
+
+
+.footer {
+  position: relative;
+  width: 100%;
+  background: #3586ff;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon,
+
+.social{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("https://i.ibb.co/wQZVxxk/wave.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
